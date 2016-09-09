@@ -8,6 +8,8 @@ var admin =[
      {id:"admin2",name:"sanjay",age:"35",pass:"sanjay"},
      {id:"admin3",name:"rahul",age:"25",pass:"rahul"}
      ];
+
+
 var user =[
      {id:"user1",name:"karan",age:"27",pass:"karan"},
      {id:"user2",name:"ashu",age:"45",pass:"ashu"},

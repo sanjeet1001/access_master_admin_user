@@ -1,0 +1,30 @@
+.modal{
+background-color:rgba(0,0,0,0.9);
+}
+.modal-content{
+background-color:rgba(0,0,0,0.3);
+color:white;
+}
+.modal .btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.modal .btn-default {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+.modal .btn-default:hover,
+.modal .btn-default:focus {
+    border: 1px solid #fff;
+    outline: 0;
+    color: #000;
+    background-color: #fff;
+}

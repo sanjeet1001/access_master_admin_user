@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NeoScript | Dashboard</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.4 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <!-- FontAwesome 4.3.0 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons 2.0.0 -->
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />    
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+	<link href="dist/css/main.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="dist/css/skins/skin-purple.css" rel="stylesheet" type="text/css" />
+    <!-- iCheck -->
+    <link href="plugins/iCheck/flat/blue.css" rel="stylesheet" type="text/css" />
+    <!-- Morris chart -->
+    <link href="plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <!-- jvectormap -->
+    <link href="plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <!-- Date Picker -->
+    <link href="plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker -->
+    <link href="plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style type="text/css" media="screen" id="css1">
+  
+  
+
+.selDone + label {
+  color: #888;
+  
+}
+
+
+.selDone:checked + label {
+  color: #000;
+}
+
+
+  </style>
+
+  </head>
+  <body class="skin-purple sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+      
+      <header class="main-header" >
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>N</b>S</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Neo</b>Script</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+                </li>
+              
+            
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+					<a type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+						<i class="fa fa-gears"></i>
+						</a>
+				
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" >
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+                    
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            
+           
+            <li>
+              <a href="pages/widgets.html">
+                <i class="fa fa-home"></i> <span>Home</span> 
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Problems</span>
+                <i class="fa fa-angle-right pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i>Assignments</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Practice</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Courses</span>
+                <i class="fa fa-angle-right pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Enrolled</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Available</a></li>
+                
+              </ul>
+            </li>
+            
+            <li><a href="#"><i class="fa fa-book"></i> <span>Help</span></a></li>
+            
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog modal-lg">
+								<div class="modal-content">
+								  <div class="modal-header" style="font-family:Lato;">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+									<ul class="list-inline" style="padding-right:10px;">
+									<li><a class="btn-default" href="index.html" style="padding:3px;">HOME</a></li>
+									<li><a class="btn-default" href="#about" style="padding:3px;">ABOUT US</a></li>
+									<li><a class="btn-default" href="#faq" style="padding:3px;">FAQ</a></li>
+									<li><a class="btn-default" href="#fb" style="padding:3px;">GET IN TOUCH</a></li>
+									</ul>
+								  </div>
+								  <div class="modal-body">
+								  <div class="container"><div class="rows"><div class="col-md-4" style="height:300px;">
+								  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+								  <h3>USER NAME</h3>
+								  <h4>Registration No.</h4><br>
+								  <button id="logout" class="btn btn-default btn-xl" style="position:relative;left:6%">Log Out</button>
+								  
+				</div>
+				
+				
+				<div class="col-md-4">
+				<div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                      <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <div class="knob-label">C</div>
+                    </div><!-- ./col -->
+                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                      <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <div class="knob-label">C++</div>
+                    </div><!-- ./col -->
+                    <div class="col-xs-4 text-center">
+                      <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <div class="knob-label">JAVA</div>
+                    </div><!-- ./col --><br><br><br><br><br>
+				<p>Performance</p>
+                 <h5>Assignments Non Submitted.</h5>
+				<p>Any other Notification.</p> 
+				</div>
+			
+		</div></div>
+		
+		<hr>
+		<div id="about" class="container"><div class="rows"><div class="col-md-9" style="max-width:70%">
+		<div class="page-header text-center">
+    		<h2 >About Us</h2>
+    	</div>
+	<div class="col-lg-12" id="about">
+    	<h3 >Our Mission</h3>
+    	<p>We want to help people learn Programming. We want to change the way programming is Learnt.We Strongly believe in learning by doing !!!!<br/>
+			By this we want to encourage students to practise and understand CODE rather than mugging it up.</p>
+		<div class="row">
+			<div class="col-md-1"></div>	
+				<div class="col-md-9"><p class="lead">
+				<blockquote class="blockquote-reverse">
+				<i><p>The Value of a College Education is not the learning of many facts but the training of the mind to think.;<p></i>
+				<p style="text-muted text-shadow">Albert Einstien<p>
+				</blockquote>
+			</div>
+		</div>
+	
+	
+			<p class="lead">Here at NeoScript.in you will find numerous number of problems on various topics with varying level of difficulty which you can practise at your convenience . Here we don't just encourage you to write code which can give output but we make you write code which is of High Standard. When we talk about high standard in coding we mean that your code is at par with the software engineering standards.</p>
+			<p class="lead">Also for Teacher's we are providing <i>No Headache Labs</i> which means you need not worry about how to conduct and evaluate the lab assignments and tests we have a one stop solution for you which will help you thoughout your course.</p>
+			<br/><br/>		
+			<p class="lead"><em>For More Information feel free to <a href="#fb">Contact us</a>, We will be more than happy to explain you about out product.</em></p>	
+    </div>
+		</div></div></div>
+		<hr>
+		
+		<div id="faq" class="container"><div class="rows"><div class="cols-md-9" style="max-width:70%;">
+		<div class="page-header text-center">
+    		<h2 >FAQ</h2>
+    	</div>
+			
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default" id="heading" style="background-color:transparent;">
+							<div class="panel-heading" role="tab" id="headingOne" style="background-color:rgba(255,255,255,1) ">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+										  Que 1 :: What kind of environment is Provided here at NeoScript, how is it different from running programs on terminal?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+								No it is not different from executing on terminal. But just make sure your program don't print unwanted statements like "Enter a string" or "output of this program is" etc. Just follow the Input Output Specification given that is enough.    
+							  </div>
+						</div>
+				  </div>
+					<div class="panel panel-default" id="heading" style="background-color:transparent;">
+				<div class="panel-heading" role="tab" id="headingTwo" style="background-color:rgba(255,255,255,1)">
+				  <h4 class="panel-title">
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					  Que 2 :: Is it true that the portal will check if i have copied my assignment from someone in my batch? 
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					Well yes the teacher will be notified for any copying. Hence we recommend you to try problems on your on and if you are finding it difficult to solve the problem go through the tutorials given by the Course Teacher. Still if you face problems try simple problems from the practise section first then move to assignments. 
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel panel-default" id="heading" style="background-color:transparent;">
+				<div class="panel-heading" role="tab" id="headingThree" style="background-color:rgba(255,255,255,1)">
+				  <h4 class="panel-title">
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					  Que 3 :: I tried editing the program through the editor provided in the submission page it is not working?
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+				  <div class="panel-body">
+					Yes it is true, we are sorry as that option is not yet made available. you need to solve the problem on your system first then upload it.
+				  </div>
+				</div>
+			  </div>
+				<div class="panel panel-default" id="heading" style="background-color:transparent;">
+				<div class="panel-heading" role="tab" id="headingThree" style="background-color:rgba(255,255,255,1)">
+				  <h4 class="panel-title">
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+					  Que 4 :: Is there any restrictions on the number of times we can do submission for coding problems?
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+				  <div class="panel-body">
+				   No you are free to make any number of submissions for coding problems, provided the date of assignment has not yet passed.
+				  </div>
+				</div>
+			  </div><br><br>
+			  <h3 style="float:left;"> Still have queries </h3><br><br><br>
+				<h4 style="float:left;">
+				<span class="glyphicon glyphicon-heart" style="padding-right:5px;color:#42dca3"></span>
+				<a href="feedback.html">We'll love to hear from you</a></h4>
+			</div>
+			</div></div>
+			</div><hr>
+			<div id="fb">
+			<div class="page-header text-center">
+    		<h2 >STUCK SOMEWHERE</h2>
+    	</div>
+					<div class="container" style="max-width:70%">		
+			
+			
+		<form role="form" id="form_qu" action="query.py" method="POST" style="position:relative;top:60px" width="150px">
+		<div class="form-group" id="email">
+							
+							<input class="form-control" name="email" id="email" type="email" 		placeholder="Your Email" style="color:white;background-color:transparent;">
+		</div>		
+		<div class="form-group" id="query">
+							
+							<textarea type="text" class="form-control" name="query" id="query" style="color:#fff;background-color:transparent;" placeholder="Query" height="80"></textarea>
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+		</form>	
+	<br/><br><br><br><br>
+	<h3 >or Reach out to us </h3><br><ul style="list-style-type:none;">
+	<li><h4> <span class="glyphicon glyphicon-envelope" style="padding-right:5px"></span> <strong>neoscript.in@gmail.com</strong></h4>
+	<li><h4> <span class="glyphicon glyphicon-phone" style="padding-right:5px"></span> <strong>+91 4444444444</strong></h4>	
+	</ul>
+	</div>
+			
+			</div>
+			<div class="modal-footer">
+			<p style="color:#42dca3">DO OR DO NOT ! There is no Try</p>
+			</div>
+			
+			</div>
+		</div>	
+										
+								</div>
+								
+								</div>
+        <section class="content-header">
+          <h1>
+            Problems
+            <small>Assignments</small>
+          </h1>
+          
+        </section>
+		<div class="content">
+			<div class="container"><div class="rows"><div class="col-lg-9">
+			<h1 style="font-family:'Titillium Web"><span style="font-weight:700">Multiple Choice</span> Questions</h1>
+			<div class="box box-danger">
+			<div class="box-body mcq">
+			<form action="" id="mcq">
+			<div id="q1">
+				<h4>Ques 1</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q1"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q1"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q1"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q1"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q2">
+			<h4>Ques 2</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q2"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q2"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q2"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q2"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q3">
+			<h4>Ques 3</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q3"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q3"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q3"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q3"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q4">
+			<h4>Ques 4</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q4"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q4"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q4"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q4"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q5">
+			<h4>Ques 5</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q5"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q5"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q5"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q5"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q6">
+			<h4>Ques 6</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q6"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q6"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q6"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q6"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q7">
+			<h4>Ques 7</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q7"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q7"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q7"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q7"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q8">
+			<h4>Ques 8</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q8"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q8"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q8"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q8"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<div id="q9">
+			<h4>Ques 9</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q9"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q9"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q9"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q9"><label>OPTION 4</label></li>
+			</ul><hr></div><div id="q10">
+			<h4>Ques 10</h4><ul class="" style="list-style-type:none;">
+				<li><input type="radio" name="q10"><label>OPTION 1</label></li>
+				<li><input type="radio" name="q10"><label>OPTION 2</label></li>
+				<li><input type="radio" name="q10"><label>OPTION 3</label></li>
+				<li><input type="radio" name="q10"><label>OPTION 4</label></li>
+			</ul><hr></div>
+			<input class="btn btn-danger pull-right" type="submit" value="SUBMIT">
+			</div>
+			</div>
+			</div></div></div>
+	  </div>
+	 </div>
+	</div>
+	
+	
+
+	<footer class="main-footer">
+            <p>Copyright &copy;NeoScript.in 2015</p>
+        </div>
+		
+      </footer>
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- jQuery UI 1.11.2 -->
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
+    <!-- Morris.js charts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <!-- jvectormap -->
+    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/knob/jquery.knob.js" type="text/javascript"></script>
+    <!-- daterangepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" type="text/javascript"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <!-- datepicker -->
+    <script src="plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+    <!-- Slimscroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script src='plugins/fastclick/fastclick.min.js'></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>    
+    
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js" type="text/javascript"></script>    
+    
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js" type="text/javascript"></script>
+	<script>
+	$(document).ready(function(){
+	$(function(){
+  $("#myModal").appendTo("body");
+});
+
+});
+$('#q1 input[type=radio]').change(function(){
+  $('#q1 input[type=radio]').addClass('selDone');
+});
+$('#q2 input[type=radio]').change(function(){
+  $('#q2 input[type=radio]').addClass('selDone');
+});
+$('#q3 input[type=radio]').change(function(){
+  $('#q3 input[type=radio]').addClass('selDone');
+});
+$('#q4 input[type=radio]').change(function(){
+  $('#q4 input[type=radio]').addClass('selDone');
+});
+$('#q5 input[type=radio]').change(function(){
+  $('#q5 input[type=radio]').addClass('selDone');
+});
+$('#q6 input[type=radio]').change(function(){
+  $('#q6 input[type=radio]').addClass('selDone');
+});
+$('#q7 input[type=radio]').change(function(){
+  $('#q7 input[type=radio]').addClass('selDone');
+});
+$('#q8 input[type=radio]').change(function(){
+  $('#q8 input[type=radio]').addClass('selDone');
+});
+$('#q9 input[type=radio]').change(function(){
+  $('#q9 input[type=radio]').addClass('selDone');
+});
+$('#q10 input[type=radio]').change(function(){
+  $('#q10 input[type=radio]').addClass('selDone');
+});
+
+
+	</script>
+  </body>
+</html>

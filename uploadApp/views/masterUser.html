@@ -1,0 +1,54 @@
+<div ng-init=init()>
+	
+	<div class="col-xs-12">
+
+		<div class="box">
+	    	<div class="box-header">
+				<h3 class="box-title"><u>Welcome <span class="bg-danger"> {{listuser.current[0].name}}</span><span style="margin-left:100px;"class="bg-danger"> #{{listuser.current[0].id}}</span></u> </h3>
+
+				<div class="box-tools">
+							
+				</div>
+			</div>
+
+			<div class="box" ng-show="adminshow">
+				<div class="box-header">
+				   <h3 class="box-title" ><u>Admin List</u> </h3>
+				   <table>
+ 					   	<tr ng-repeat="admin in listuser.admin">
+						   	<td>
+						   		#{{admin.id}}<br>
+						   	</td>
+						   		
+					   	</tr>
+				   </table>					
+				</div>
+						
+				<div class="timeline-body">
+	                <article style="padding-left:10px; border-style:inset;" ng-bind-html="newtext"></article>
+	            </div>
+
+			</div>
+			<div class="box" ng-show="usershow">
+				<div class="box-header">
+				   <h3 class="box-title"><u>User List</h3>
+				   <table>
+ 					   	<tr ng-repeat="user in listuser.user">
+						   	<td>
+						   		#{{user.id}}<br>
+						   	</td>
+						   		
+					   	</tr>
+				   </table>					
+				</div>
+						
+				<div class="timeline-body">
+	                <article style="padding-left:10px; border-style:inset;" ng-bind-html="newtext"></article>
+	            </div>
+
+			</div>
+		</div>
+		<div><h4>Step 1: First press F12.(console mode)</h3></div><br>
+		<div><h4>Step 2: To see the user detail just remove master from url , add /id and press enter.</h3></div>
+	
+</div>
